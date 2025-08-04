@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Vesperr Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css') }}" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Vesperr
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<style>
+    .section-potensi {
+        background: url('{{ asset("theme/assets/img/bg-daun.png") }}') no-repeat center center;
+        background-size: cover;
+        padding: 60px 20px;
+        border-radius: 24px;
+    }
+
+    .card-potensi {
+        background: linear-gradient(135deg, #EAF4FF, #ffffff);
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-potensi:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-potensi img {
+        transition: transform 0.3s ease;
+    }
+
+    .card-potensi:hover img {
+        transform: scale(1.08);
+    }
+
+    .potensi-icon {
+        font-size: 24px;
+        color: #1E88E5; /* Ikon biru */
+        margin-right: 8px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #2F4F4F;
+    }
+
+    .section-title p {
+        font-size: 16px;
+        color: #6c757d;
+    }
+
+    #alt-services.section {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+/* Gambar carousel: seragam, tinggi besar */
+.carousel-inner img {
+  width: 100%;
+  height: 400px; /* Tinggi besar */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Kotak deskripsi: lebih besar & proporsional */
+.details {
+  position: absolute;
+  bottom: 20px; /* Sedikit turun biar lebih seimbang */
+  left: 16px;
+  right: 16px;
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 100px; /* Lebih tinggi agar teks tidak terlalu sempit */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Judul di dalam kotak */
+.details h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Paragraf deskripsi */
+.details p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.carousel-potensi {
+  height: 250px; /* atur sesuai selera */
+}
+
+.carousel-potensi img {
+  object-fit: cover;
+  height: 100%;
+}
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      
+        <h1 class="sitename">Desa Kalijaya</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home<br></a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#infografis">Infografis</a></li>
+          <li><a href="#sarana">Sarana & Prasarana</a></li>
+          <li><a href="#informasi">Informasi Kegiatan</a></li>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+
+    <!-- Selamat Datang -->
+    <section id="hero" class="hero section" style="margin-top: 40px;">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                    <h1>Selamat Datang di Website Desa Kalijaya</h1>
+                    <p>
+                      Website ini merupakan media informasi resmi Desa Kalijaya.
+                      Melalui halaman ini, kami hadir untuk memberikan informasi seputar kegiatan desa, kondisi geografis, serta potensi lokal.
+                    </p>
+                    <div class="d-flex">
+                        <a href="#profil" class="btn-get-started">Selanjutnya</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                    <img src="assets/img/hero-img.png" class="img-fluid animated" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Desa -->
+    <section id="profil" class="about section py-5">
+    <div class="container">
+        <!-- Judul Halaman -->
+       <div class="container section-title" data-aos="fade-up">
+            <h2 class="fw-bold" style="font-size: 28px;">Profil Desa</h2>
+        </div>
+
+        <!-- VISI & MISI -->
+        <div class="row align-items-center mb-5" style="margin-top: -50px;">
+            <!-- Foto Kepala Desa -->
+           <div class="col-lg-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/kades.png" alt="Kepala Desa Kalijaya" class="img-fluid" style="max-width: 300px;">
+                <h5 class="mt-3 mb-1">Adnan Hamdani, S. Ag</h5>
+                <p class="mb-0">Kepala Desa Kalijaya</p>
+            </div>
+
+            <!-- Teks Visi & Misi -->
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="fw-bold text-primary text-center">VISI</h3>
+                <p class="text-center fst-italic">"Terwujudnya Masyarakat Desa Kalijaya Yang Sejahtera melalui Pembangunan di Berbagai Bidang Tanpa Meninggalkan Kearifan Lokal."</p>
+
+                <h3 class="fw-bold text-primary text-center mt-4">MISI</h3>
+                <ul class="text-start mx-auto" style="max-width: 600px; margin-top: 20px;">
+                    <li>Menciptakan tata kelola pemerintahan yang baik berdasarkan demokratisasi, transparansi, akuntabel, dan pelayanan masyarakat.</li>
+                    <li>Meningkatkan sistem perencanaan pembangunan partisipatif berbasis DOUM.</li>
+                    <li>Transparansi informasi penyelenggaraan pembangunan (IPPD).</li>
+                    <li>Pembangunan infrastruktur desa berkelanjutan berbasis skala prioritas.</li>
+                    <li>Penanganan keadaan darurat dan bencana.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SEJARAH DESA -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2 class="fw-bold" style="font-size: 28px;">Sejarah Desa</h2>
+        </div>
+
+        <div class="row align-items-center mb-5" style="margin-top: -30px;">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <p id="sejarahText" style="text-align: justify;">
+                    Desa Kalijaya merupakan sebuah desa pemekaran dari desa Kalibuaya yang berdiri sejak <strong>5 Juli 1982</strong>, seiring dengan berjalannya waktu dan perubahan peraturan perundang-undangan mengenai Desa, akhirnya pada tahun <strong>1982</strong> dimekarkan menjadi tiga desa: wilayah barat menjadi Desa Kalibuaya, wilayah tengah menjadi Kalijaya, dan wilayah utara menjadi Desa Kalisari.
+                    <span id="more" style="display: none;"> Dengan kata lain, tahun 1982 merupakan tonggak awal berdirinya Desa Kalijaya yang baru. Sehingga tanggal 5 Juli 1982 merupakan tahun kelahiran Desa Kalijaya sekarang.</span>
+                </p>
+                <a href="javascript:void(0);" onclick="toggleSejarah()" class="btn btn-sm btn-outline-primary">
+                    <span id="btnText">Lihat lebih banyak</span> <i class="bi bi-chevron-down" id="iconToggle"></i>
+                </a>
+            </div>
+            <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/sejarah.png" alt="Sejarah Desa Kalijaya" class="img-fluid rounded shadow" style="max-width: 500px;">
+                <p class="mt-2 text-muted">Desa Kalijaya</p>
+            </div>
+        </div>
+
+        <!-- PROFIL UMUM -->
+        <div  id="infografis" class="container my-5">
+
+            <!-- Judul Section -->
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="fw-bold" style="font-size: 28px;">Gambaran Umum Desa</h2>
+            </div>
+
+            <!-- Geografis dan Peta -->
+            <div class="row gy-4 mb-5" style="margin-top: -50px;">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card p-4 border-0 shadow-sm h-100">
+                        <h4 class="fw-bold text-primary"><i class="bi bi-geo-alt-fill me-2"></i>Geografis</h4>
+                        <ul class="list-unstyled small mt-3">
+                            <li><strong>Luas Wilayah:</strong> 451 ha</li>
+                            <li><strong>Letak:</strong> Kecamatan Telagasari, Kabupaten Karawang</li>
+                            <li><strong>Topografi:</strong> Dataran rendah, dominan lahan sawah</li>
+                            <li><strong>Batas Wilayah:</strong>
+                                <ul class="mt-1">
+                                    <li>Utara: Desa Kalisari</li>
+                                    <li>Selatan: Desa Cadaskertajaya</li>
+                                    <li>Barat: Desa Kalibuaya</li>
+                                    <li>Timur: Desa Cilewo dan Desa Cadaskertajaya</li>
+                                </ul>
+                            </li>
+                            <li><strong>Jarak ke Kecamatan:</strong> ±6 km</li>
+                            <li><strong>Jarak ke Kabupaten:</strong> ±17 km</li>
+                        </ul>
+                    </div>
+                </div>
+        <!-- Maps -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-3 border-0 shadow-sm h-100">
+            <!-- SECTION: LOKASI DESA (GOOGLE MAPS) -->
+            <section id="lokasi" class="py-4">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center mb-3">
+                <h2 class="fw-bold" style="font-size: 24px;">
+                    <i class="bi bi-geo-alt-fill text-primary me-2"></i>Lokasi Desa Kalijaya
+                </h2>
+                <p class="text-muted mb-2">Peta lokasi berikut menunjukan letak geografis Desa Kalijaya, Kecamatan Telagasari, Karawang.</p>
+                </div>
+
+                <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden mb-4" style="margin-top: -50px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15830.786342882108!2d107.4309535!3d-6.3568328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6977b5e08a2177%3A0x779a6b3a08f3c31e!2sKalijaya%2C%20Kec.%20Telagasari%2C%20Kabupaten%20Karawang!5e0!3m2!1sid!2sid!4v1721903137037!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+            </div>
+            </section>
+        </div>
+        </div>
+            <!-- Wilayah Administratif -->
+            <div class="card p-4 border-0 shadow-sm mb-5" data-aos="fade-up">
+                <h4 class="fw-bold text-primary mb-4"><i class="bi bi-diagram-3-fill me-2"></i>Wilayah Administratif</h4>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="border p-3 rounded shadow-sm h-100">
+                            <h5 class="text-center fw-bold">Dusun 1</h5>
+                            <ul class="list-unstyled small">
+                                <li><strong>Jumlah RW:</strong> 2</li>
+                                <li><strong>Jumlah RT:</strong> 12</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="border p-3 rounded shadow-sm h-100">
+                            <h5 class="text-center fw-bold">Dusun 2</h5>
+                            <ul class="list-unstyled small">
+                                <li><strong>Jumlah RW:</strong> 2</li>
+                                <li><strong>Jumlah RT:</strong> 6</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <div class="alert alert-primary p-2">
+                        Total: <strong>2 Dusun</strong>, <strong>4 RW</strong>, <strong>18 RT</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demografis per Dusun -->
+            <div class="card p-4 border-0 shadow-sm mb-5" data-aos="fade-up">
+              <h4 class="fw-bold text-primary mb-4"><i class="bi bi-people-fill me-2"></i>Demografis per Dusun</h4>
+              <div class="row g-4">
+
+                <div class="col-md-6">
+                  <div class="border p-3 rounded shadow-sm h-100">
+                    <h5 class="text-center fw-bold text-primary">Dusun Karokrok Selatan</h5>
+                    <ul class="list-unstyled small">
+                      <li><strong>Laki-laki:</strong> 760 jiwa</li>
+                      <li><strong>Perempuan:</strong> 758 jiwa</li>
+                      <li><strong>Total Penduduk:</strong> 1518 jiwa</li>
+                      <li><strong>Jumlah KK:</strong> 526 KK</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="border p-3 rounded shadow-sm h-100">
+                    <h5 class="text-center fw-bold text-primary">Dusun Karokrok Utara</h5>
+                    <ul class="list-unstyled small">
+                      <li><strong>Laki-laki:</strong> 721 jiwa</li>
+                      <li><strong>Perempuan:</strong> 588 jiwa</li>
+                      <li><strong>Total Penduduk:</strong> 1309 jiwa</li>
+                      <li><strong>Jumlah KK:</strong> 483 KK</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="border p-3 rounded shadow-sm h-100">
+                    <h5 class="text-center fw-bold text-primary">Dusun Sempora</h5>
+                    <ul class="list-unstyled small">
+                      <li><strong>Laki-laki:</strong> 450 jiwa</li>
+                      <li><strong>Perempuan:</strong> 447 jiwa</li>
+                      <li><strong>Total Penduduk:</strong> 897 jiwa</li>
+                      <li><strong>Jumlah KK:</strong> 310 KK</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="border p-3 rounded shadow-sm h-100">
+                    <h5 class="text-center fw-bold text-primary">Dusun Mekarjaya</h5>
+                    <ul class="list-unstyled small">
+                      <li><strong>Laki-laki:</strong> 211 jiwa</li>
+                      <li><strong>Perempuan:</strong> 225 jiwa</li>
+                      <li><strong>Total Penduduk:</strong> 436 jiwa</li>
+                      <li><strong>Jumlah KK:</strong> 138 KK</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="text-center mt-4">
+                <div class="alert alert-primary p-2">
+                  Total: <strong>4 Dusun</strong>, <strong>4160 jiwa</strong>, <strong>1457 KK</strong>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Struktur Organisasi -->
+        <div class="container section-title" data-aos="fade-up" style="margin-top: -30px;">
+            <h2 class="fw-bold" style="font-size: 28px;">Struktur Organisasi Desa</h2>
+        </div>
+            <div class="text-center mb-3">
+                <img src="assets/img/sturktur.png" alt="Struktur Organisasi Desa" class="img-fluid rounded shadow" style="max-width: 500px;">
+            </div>
+            <p class="text-center small text-muted">Struktur Organisasi Pemerintah Desa Kalijaya</p>
+        </div>
+
+      <!-- Potensi Desa -->
+      <div class="container section-potensi" id="potensi-desa" data-aos="fade-up">
+          <div class="section-title text-center mb-5">
+              <h2 class="animate__animated animate__fadeInDown">Potensi Desa</h2>
+              <p class="animate__animated animate__fadeInUp animate__delay-1s">Desa Kalijaya memiliki berbagai potensi unggulan yang menjadi kekuatan utama dalam mendukung perekonomian masyarakat.
+              Beberapa potensi yang terus dikembangkan antara lain:>
+          </div>
+          <div class="row justify-content-center">
+
+              <!-- Pertanian -->
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card card-potensi h-100">
+                      <div id="carouselPertanian" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-potensi ratio ratio-4x3 rounded-top overflow-hidden">
+                              <div class="carousel-item active">
+                                  <img src="assets/img/swh.png" class="d-block w-100 object-fit-cover" alt="Pertanian 1">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="assets/img/swh1.png" class="d-block w-100 object-fit-cover" alt="Pertanian 2">
+                              </div>
+                               <div class="carousel-item">
+                                  <img src="assets/img/swh2.png" class="d-block w-100 object-fit-cover" alt="Pertanian 2">
+                              </div>
+                             <div class="carousel-item">
+                                  <img src="assets/img/swh3.png" class="d-block w-100 object-fit-cover" alt="Pertanian 2">
+                              </div> 
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPertanian" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Sebelumnya</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselPertanian" data-bs-slide="next">
+                              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Berikutnya</span>
+                          </button>
+                      </div>
+                      <div class="text-center p-4">
+                          <h5 class="fw-bold"><i class="fas fa-tractor potensi-icon"></i>Pertanian</h5>
+                          <p class="text-muted small">Butir padi yang tumbuh adalah hasil kesabaran, dedikasi, dan cinta terhadap tanah sendiri.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Peternakan -->
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                  <div class="card card-potensi h-100">
+                      <div id="carouselPeternakan" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-potensi ratio ratio-4x3 rounded-top overflow-hidden">
+                              <div class="carousel-item active">
+                                  <img src="assets/img/kambing.png" class="d-block w-100 object-fit-cover" alt="Peternakan 1">
+                              </div>
+                              <div class="carousel-item active">
+                                  <img src="assets/img/hwn.png" class="d-block w-100 object-fit-cover" alt="Peternakan 1">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="assets/img/hwn1.png" class="d-block w-100 object-fit-cover" alt="Peternakan 3">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="assets/img/hwn2.png" class="d-block w-100 object-fit-cover" alt="Peternakan 4">
+                              </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselPeternakan" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Sebelumnya</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselPeternakan" data-bs-slide="next">
+                              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Berikutnya</span>
+                          </button>
+                      </div>
+                      <div class="text-center p-4">
+                          <h5 class="fw-bold"><i class="fas fa-cow potensi-icon"></i>Peternakan</h5>
+                          <p class="text-muted small">Ternak bukan sekadar sumber pangan, tapi simbol ketekunan dan warisan kehidupan desa.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- UMKM -->
+              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                  <div class="card card-potensi h-100">
+                      <div id="carouselUMKM" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-potensi ratio ratio-4x3 rounded-top overflow-hidden">
+                              <div class="carousel-item active">
+                                  <img src="assets/img/umkm.png" class="d-block w-100 object-fit-cover" alt="UMKM 1">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="assets/img/umkm2.png" class="d-block w-100 object-fit-cover" alt="UMKM 2">
+                              </div>
+                               <div class="carousel-item">
+                                  <img src="assets/img/umkm1.png" class="d-block w-100 object-fit-cover" alt="UMKM 2">
+                              </div>
+                               <div class="carousel-item">
+                                  <img src="assets/img/umkm3.png" class="d-block w-100 object-fit-cover" alt="UMKM 2">
+                              </div>
+                               <div class="carousel-item">
+                                  <img src="assets/img/umkm4.png" class="d-block w-100 object-fit-cover" alt="UMKM 2">
+                              </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselUMKM" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Sebelumnya</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselUMKM" data-bs-slide="next">
+                              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                              <span class="visually-hidden">Berikutnya</span>
+                          </button>
+                      </div>
+                      <div class="text-center p-4">
+                          <h5 class="fw-bold"><i class="fas fa-store potensi-icon"></i>UMKM</h5>
+                          <p class="text-muted small">Dari selembar peyek yang renyah, lahir semangat mandiri dan jati diri warga desa.</p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- SARANA & PRASARANA -->
+    <section id="sarana" class="py-5" style="margin-top: -150px;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title mb-4">
+          <h2 class="fw-bold text-center" style="font-size: 28px;">Sarana & Prasarana Keagamaan</h2>
+          <p class="text-center">
+            Desa Kalijaya memiliki berbagai sarana penunjang kegiatan keagamaan yang tersebar di setiap dusun. Fasilitas ini mencerminkan semangat religius warga serta mendukung kegiatan keagamaan dan pendidikan spiritual masyarakat.
+          </p>
+        </div>
+
+        <div class="table-responsive" style="margin-top: -50px;">
+          <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-primary text-center">
+              <tr>
+                <th>No</th>
+                <th>KAMPUNG</th>
+                <th><i class="bi bi-mosque"></i> Masjid</th>
+                <th><i class="bi bi-house-door"></i> Mushola</th>
+                <th><i class="bi bi-book"></i> Madrasah</th>
+                <th><i class="bi bi-person-video2"></i> Majlis Ta'lim</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>1</td>
+                <td>Kp.Karokrok Selatan</td>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kp.Karokrok Utara</td>
+                <td>1</td>
+                <td>7</td>
+                <td>-</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Kp.Sampora</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Kp.Tegal Asem</td>
+                <td>1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Kp.Mekarjaya</td>
+                <td>1</td>
+                <td>1</td>
+                <td>-</td>
+                <td>2</td>
+              </tr>
+              <tr class="fw-bold bg-light">
+                <td colspan="2">Jumlah</td>
+                <td>5</td>
+                <td>13</td>
+                <td>2</td>
+                <td>12</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SARANA PENDIDIKAN -->
+    <section id="pendidikan" class="py-5" style="margin-top: -50px;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title mb-4">
+          <h2 class="fw-bold text-center" style="font-size: 28px;">Sarana & Prasarana Pendidikan</h2>
+          <p class="text-center">
+            Sarana pendidikan di Desa Kalijaya terdiri dari berbagai jenjang, mulai dari pendidikan dasar hingga keagamaan. Berikut adalah daftar lembaga pendidikan yang terdapat di desa:
+          </p>
+        </div>
+
+        <div class="table-responsive" style="margin-top: -60px;">
+          <table class="table table-bordered table-hover shadow-sm">
+            <thead class="table-primary text-center">
+              <tr>
+                <th><i ></i> No</th>
+                <th><i class="bi bi-mortarboard"></i> Jenis Pendidikan</th>
+                <th><i class="bi bi-bank2"></i> Nama Lembaga</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <!-- SD -->
+              <tr>
+                <td>1</td>
+                <td>SD</td>
+                <td>SDN 1 Kalijaya</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>SD</td>
+                <td>SDN 2 Kalijaya</td>
+              </tr>
+
+              <!-- MI -->
+              <tr>
+                <td>3</td>
+                <td>MI/TK</td>
+                <td>Al Istianah Telagasari</td>
+              </tr>
+
+              <!-- PAUD -->
+              <tr>
+                <td>4</td>
+                <td>PAUD</td>
+                <td>Al Amanah</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>PAUD</td>
+                <td>Nurus Solihin</td>
+              </tr>
+
+              <!-- TPA -->
+              <tr>
+                <td>6</td>
+                <td>TPA</td>
+                <td>Madinatul Hasanah Nihayatul Amal </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>TPA</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informasi Kegiatan -->
+    <section id="#informasi" class="alt-services section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+        <div class="section-title mb-4">
+            <h2 class="fw-bold text-center" style="font-size: 28px;">Informasi Kegiatan</h2>
+            <p class="text-center">
+                Desa Kalijaya secara rutin menyelenggarakan berbagai kegiatan yang bertujuan untuk meningkatkan kebersamaan warga, pemberdayaan masyarakat, serta pembangunan desa.
+                Kegiatan-kegiatan ini mencakup bidang sosial, kesehatan, keagamaan, pendidikan, hingga gotong royong.
+                Berikut adalah dokumentasi dan informasi kegiatan yang telah dan akan dilaksanakan di Desa Kalijaya:
+            </p>
+        </div>
+
+          <!-- Box 1: Minggon Desa dengan Carousel -->
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item position-relative">
+              
+              <!-- Carousel Start -->
+              <div id="carouselMinggon" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/minggon3.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/minggon2.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/minggon5.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/minggon4.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/minggon7.png" class="d-block w-100" alt="">
+                  </div><div class="carousel-item">
+                    <img src="assets/img/minggon6.png" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMinggon" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMinggon" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+
+              <!-- Detail -->
+              <div class="details">
+                <a href="service-details.html" class="stretched-link">
+                  <h3 style="margin-top: -20px;">MINGGON DESA</h3>
+                </a>
+                <p>"Rutinitas pemerintah desa untuk membahas program kerja, pelayanan masyarakat, evaluasi kegiatan, dan koordinasi antarperangkat desa"</p>
+              </div>
+
+            </div>
+          </div>
+          <!-- Box 2: Minggon Desa dengan Carousel -->
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item position-relative">
+              
+              <!-- Carousel Start -->
+              <div id="carouselMinggon2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/s.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/s1.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/s2.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/s3.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/s4.png" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMinggon2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMinggon2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+
+              <!-- Detail -->
+              <div class="details">
+                <a href="service-details.html" class="stretched-link">
+                  <h3 style="margin-top: -20px;">SENAM MINGGUAN</h3>
+                </a>
+                <p>"Senam Mingguan adalah kegiatan olahraga rutin yang biasanya diadakan setiap minggu oleh pemerintah desa."</p>
+              </div>
+
+            </div>
+          </div>
+          <!-- Box 3: Minggon Desa dengan Carousel -->
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item position-relative">
+              
+              <!-- Carousel Start -->
+              <div id="carouselMinggon3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/jum.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jum0.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jumm.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jummm.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jum1.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jum2.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/jum3.png" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMinggon3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMinggon3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+
+              <!-- Detail -->
+              <div class="details">
+                <a href="service-details.html" class="stretched-link">
+                  <h3 style="margin-top: -20px;">JUMSIH</h3>
+                </a>
+                <p>"singkatan dari Jumat Bersih, yaitu kegiatan gotong royong membersihkan lingkungan yang biasanya dilakukan setiap hari Jumat oleh warga desa"</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Box 4: Minggon Desa dengan Carousel -->
+          <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item position-relative">
+              
+              <!-- Carousel Start -->
+              <div id="carouselMinggon4" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/pos.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos1.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos2.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos3.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos4.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos5.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/pos6.png" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMinggon4" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMinggon4" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <!-- Carousel End -->
+
+              <!-- Detail -->
+              <div class="details">
+                <a href="service-details.html" class="stretched-link">
+                  <h3 style="margin-top: -20px;">POSYANDU & CKG</h3>
+                </a>
+                <p>"Posyandu dan CKG adalah kegiatan desa yang mendukung tumbuh kembang anak."</p>
+              </div>
+
+            </div>
+          </div> 
+
+        </div> <!-- Tutup row -->
+      </div> <!-- Tutup container -->
+    </section>
+
+
+ 
+<section id="video" class="py-5" style="margin-top: -50px;">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title mb-4">
+      <h2 class="fw-bold text-center" style="font-size: 28px;">Video Profil Desa Kalijaya</h2>
+      <p class="text-center">
+        Berikut adalah video dokumenter singkat yang menampilkan sejarah, potensi, dan kehidupan masyarakat Desa Kalijaya.
+      </p>
+    </div>
+
+    <div class="d-flex justify-content-center" style="margin-top: -50px;">
+      <div class="ratio ratio-16x9" style="max-width: 800px; width: 100%;">
+        <iframe 
+          src="https://www.youtube.com/embed/y7UFqwk7amI" 
+          title="YouTube video player" 
+          allowfullscreen 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= End Video Section ======= -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+       <!-- Informasi Kontak -->
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-6 text-center">
+          <h5 class="fw-bold mb-3">Kontak Desa Kalijaya</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill me-2 text-primary"></i>Desa Kalijaya, Kec. Telagasari, Kab. Karawang, Jawa Barat</p>
+          <p class="mb-1"><i class="bi bi-telephone-fill me-2 text-primary"></i>0812-3456-7890</p>
+          <p class="mb-3"><i class="bi bi-envelope-fill me-2 text-primary"></i>desakalijaya@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Media Sosial -->
+      <div class="social-links d-flex justify-content-center mb-3">
+        <a href="#" class="mx-2 text-dark"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="mx-2 text-dark"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="mx-2 text-dark"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="mx-2 text-dark"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+      <!-- Hak Cipta -->
+      <div class="copyright text-center mb-2">
+        <p>
+          © <span>Copyright</span> 
+          <strong class="px-1 sitename">KKN REGULER UBP KARAWANG Desa Kalijaya 2025</strong> 
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+
+      <!-- Kredit Desain -->
+      <div class="credits text-center">
+        Designed by <a href="https://bootstrapmade.com/">Nursyahiira Hanum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
