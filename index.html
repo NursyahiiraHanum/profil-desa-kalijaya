@@ -929,6 +929,27 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
+<script>
+    function toggleSejarah() {
+        const moreText = document.getElementById("more");
+        const btnText = document.getElementById("btnText");
+        const iconToggle = document.getElementById("iconToggle");
+
+        if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            btnText.textContent = "Lihat lebih sedikit";
+            iconToggle.classList.remove("bi-chevron-down");
+            iconToggle.classList.add("bi-chevron-up");
+        } else {
+            moreText.style.display = "none";
+            btnText.textContent = "Lihat lebih banyak";
+            iconToggle.classList.remove("bi-chevron-up");
+            iconToggle.classList.add("bi-chevron-down");
+        }
+    }
+</script>
+
+
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
